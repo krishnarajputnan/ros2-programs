@@ -1,0 +1,3 @@
+[console_scripts]
+chat_node = comm_link.chat_node:main
+
