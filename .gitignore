@@ -1,0 +1,10 @@
+# Ignore build, log, and install folders anywhere in the repo
+**/build/
+**/log/
+**/install/
+
+# Specifically ignore those annoying Windows metadata files
+**/Zone.Identifier
+
+# Ignore Python cache files
+**/__pycache__/
