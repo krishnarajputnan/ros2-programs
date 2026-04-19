@@ -23,8 +23,8 @@ To test these packages on your local machine, follow these steps:
 
 **1. Clone the repository**
 ```bash
-git clone <paste-your-github-repo-link-here>
-cd <name-of-the-cloned-folder>
+git clone https://github.com/krishnarajputnan/ros2-programs
+cd ros2-programs
 ```
 
 **2. Build the workspace**
@@ -51,25 +51,41 @@ To test the chat nodes, you will need two separate terminal windows. Remember to
 
 **Terminal 1 (Run the Publisher):**
 ```bash
-ros2 run comm_link <name_of_your_publisher_executable>
+ros2 run comm_link chat_node <name_of_your_publisher_executable>
 ```
 
 **Terminal 2 (Run the Subscriber):**
 ```bash
-ros2 run comm_link <name_of_your_subscriber_executable>
+ros2 run comm_link chat_node <name_of_your_subscriber_executable>
 ```
 
 ### Task 2: Signal Processing
+**Terminal 1 (Run the publisher):**
 ```bash
-ros2 run <task2_package_name> <task2_executable_name>
+ros2 run auv_signal_processing publisher
+```
+**Terminal 2 (Run the processor):**
+```bash
+ros2 run auv_signal_processing processor
+```
+
+**Terminal 3 (Run the output):**
+```bash
+ros2 run auv_signal_processing output
 ```
 
 ### Task 3: Dead Reckoning
+**Terminal 1 (Run the commander):**
 ```bash
-ros2 run <task3_package_name> <task3_executable_name>
+ros2 run sub_controller commander
+```
+**Terminal 2 (Run the navigator):**
+```bash
+ros2 run sub_controller navigator
 ```
 
 ### Task 4: Visual Lock
 ```bash
-ros2 run <task4_package_name> <task4_executable_name>
+ros2 run task4_vision visual_lock
 ```
+I was not able to access webcam from WSL, so i used a dummy webcam simulation.
